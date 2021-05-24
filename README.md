@@ -128,4 +128,138 @@ Uion接下来讲
             }
         }
 ```
+# 随机池
+
+保存用户给的值，并给标上序号；
+
+需要提供以下操作
+
+insert
+
+getrandom 随机返回流中的任意一个值
+
+删除
+
+定义随机池
+
+```java
+public static class Pool<k> {
+   
+   private HashMap<k,Integer> map1;
+   private HashMap<Integer,k> map2;
+   private int size;
+   
+   public Pool() {
+      this.map1 = new HashMap<k, Integer>();
+      this.map2 = new HashMap<Integer, k>();
+      this.size = 0;
+   }
+}
+```
+
+定义插入操作
+
+```
+public void insert(k key) {
+   if(!this.map1.containsKey(key)) {
+   //检查是否存在该元素，如果不存在，再将其加入两个表中
+      this.map1.put(key,this.size);
+      this.map2.put(this.size++,key);
+   }
+}
+```
+
+定义删除操作
+
+```java
+public void delete(k key) {
+			if(this.map1.containsKey(key)) {
+				int deleteIndex = this.map1.get(key);
+				int lastIndex = --this.size;
+				k lastKey = this.map2.get(lastIndex);
+				this.map1.put(lastKey,deleteIndex);
+				this.map2.put(deleteIndex,lastKey);
+				this.map1.remove(key);
+				this.map2.remove(this.size);
+			}
+		}
+```
+
+定义得到随机数操作
+
+```java
+public k getRandom() {
+			if(this.size == 0){
+				return null;
+			}
+			int random = (int)(Math.random() * this.size);// 0 ~ this.size
+			return this.map2.get(random);
+		}
+```
+
+完整代码
+
+```java
+package class01;
+
+import java.util.HashMap;
+
+public class Code02_RandomPool {
+
+	public static class Pool<k> {
+
+		private HashMap<k,Integer> map1;
+		private HashMap<Integer,k> map2;
+		private int size;
+
+		public Pool() {
+			this.map1 = new HashMap<k, Integer>();
+			this.map2 = new HashMap<Integer, k>();
+			this.size = 0;
+		}
+
+		public void insert(k key) {
+			if(!this.map1.containsKey(key)) {
+				this.map1.put(key,this.size);
+				this.map2.put(this.size++,key);
+			}
+		}
+
+		public k getRandom() {
+			if(this.size == 0){
+				return null;
+			}
+			int random = (int)(Math.random() * this.size);// 0 ~ this.size
+			return this.map2.get(random);
+		}
+
+		public void delete(k key) {
+			if(this.map1.containsKey(key)) {
+				int deleteIndex = this.map1.get(key);
+				int lastIndex = --this.size;
+				k lastKey = this.map2.get(lastIndex);
+				this.map1.put(lastKey,deleteIndex);
+				this.map2.put(deleteIndex,lastKey);
+				this.map1.remove(key);
+				this.map2.remove(this.size);
+			}
+		}
+	}
+
+	public static void main(String[] args) {
+		Pool<String> pool = new Pool<String>();
+		pool.insert("夏");
+		pool.insert("天");
+		pool.insert("学NM自动化");
+		pool.delete("夏");
+		for(int i = 0 ;i < 100;i++) {
+			System.out.println(pool.getRandom());
+			System.out.println(pool.getRandom());
+		}
+	}
+
+}
+```
+
+
 
