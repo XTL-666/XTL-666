@@ -256,6 +256,176 @@ public class Code02_RandomPool {
 
 }
 ```
+## 堆排序
+
+按照堆的特点可以把堆分为**大顶堆**和**小顶堆**
+
+大顶堆：每个结点的值都**大于**或**等于**其左右孩子结点的值
+
+小顶堆：每个结点的值都**小于**或**等于**其左右孩子结点的值
+
+给出的是数组形式，但我们用完全二叉树的序号也可以表示它。
+
+```java
+public class Code03_HeapSort {
+
+	public static void heapSort(int[] arr) {
+		
+		if (arr == null || arr.length < 2) {
+			return;
+		}
+
+		for (int i = 0; i < arr.length; i++) {
+			heapInsert(arr, i);
+		}
+
+		int size = arr.length;
+		swap(arr,0,size--);
+		while(size > 0) {
+			heapify(arr,0,size);
+			swap(arr,0,--size);
+		}
+	}
+
+	public static void heapInsert(int[] arr,int index) {
+		while(arr[index] > arr[(index -1) / 2]) {
+			swap(arr,index,(index - 1)/2);
+			index = (index - 1)/2;
+		}
+	}
+	
+	public static void heapfiy(int[] arr,int index,int size) {
+		int left = index * 2 + 1;
+		while (left < size ) {
+			int larest = left + 1 < size && arr[index + 1] > arr[left] ? left + 1 : left;
+			larest = arr[larest] > arr[index] ? larest : index;
+			if (largest == index) {
+				break;
+			}
+			swap(arr,largest,index);
+			index = largest;
+			left = index * 2 + 1;
+		}
+	}
+```
+
+定义swap函数
+
+```java
+	public static void swap(int[] arr, int i, int j) {
+		int tmp = arr[i];
+		arr[i] = arr[j];
+		arr[j] = tmp;
+	}
+```
+
+用对数器检验一下策略的正确性
+
+```java
+public static void comparator(int[] arr) {
+	Arrays.sort(arr);
+}
+public static int[] generateRandomArray(int maxSize,int maxValue) {
+	int[] arr = new int[(int)((maxSize + 1)*Math.random())];
+	for (int i = 0; i < arr.length ; i++) {
+		arr[i]  = (int)((maxvalue + 1) *Math.random()) - (int) (maxValue * Math.random());
+	}
+	return arr;
+}
+
+public static int[] copyArray(int[] arr) {
+	if(arr == null) {
+		return null; 
+	}
+	int[] res = new int[arr.length];
+	for (int i = 0 ; i < arr.length;i++) {
+		res[i] = arr[i];
+	}
+	return res;
+}
+	public static boolean isEqual(int[] arr1, int[] arr2) {
+		if ((arr1 == null && arr2 != null) || (arr1 != null && arr2 == null)) {
+			return false;
+		}
+		if (arr1 == null && arr2 == null) {
+			return true;
+		}
+		if (arr1.length != arr2.length) {
+			return false;
+		}
+		for (int i = 0; i < arr1.length; i++) {
+			if (arr1[i] != arr2[i]) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+	public static void printArray(int[] arr) {
+		if (arr == null) {
+			return;
+		}
+		for (int i = 0; i < arr.length; i++) {
+			System.out.print(arr[i] + " ");
+		}
+		System.out.println();
+	}
+	
+	public static void main(String[] args) {
+		int testTime = 500000;
+		int maxSize = 100;
+		int maxValue = 100;
+		boolean succeed = true;
+		for (int i = 0; i < testTime; i++) {
+			int[] arr1 = generateRandomArray(maxSize, maxValue);
+			int[] arr2 = copyArray(arr1);
+			heapSort(arr1);
+			comparator(arr2);
+			if (!isEqual(arr1, arr2)) {
+				succeed = false;
+				break;
+			}
+		}
+		System.out.println(succeed ? "Nice!" : "Fucking fucked!");
+
+		int[] arr = generateRandomArray(maxSize, maxValue);
+		printArray(arr);
+		heapSort(arr);
+		printArray(arr);
+	}
+```
+
+这个在java中其实已经给定义好了
+
+```
+PriorityQueue<Integer> heap = new PriorityQueue<>();
+```
+
+问题：已知一个几乎有序的数组，几乎有序是指，如果把数组排好顺序的话，每个元素移动的距离可以不超过k，并且k相对于数组来说比较小。请选择一个合适的排序算法针对这个数据进行排序
+
+显然用堆排序很好解决它
+
+```java
+public void sortedArrDistanceLessK(int[] arr, int k) {
+		PriorityQueue<Integer> heap = new PriorityQueue<>();
+		int index = 0;
+		for (; index < Math.min(arr.length, k); index++) {
+			heap.add(arr[index]);
+		}
+		int i = 0;
+		for (; index < arr.length; i++, index++) {
+			heap.add(arr[index]);
+			arr[i] = heap.poll();
+		}
+		while (!heap.isEmpty()) {
+			arr[i++] = heap.poll();
+		}
+	}
+```
+
+时间复杂度O（N*logk）
+
+当k较小时，我们可以认为时间复杂度接近O（n）
 
 
 
