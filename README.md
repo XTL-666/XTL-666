@@ -48,8 +48,6 @@
     </summary>
 
 
-[![](https://github.com/kallydev/kallydev/blob/main/images/banner.png)](https://kallydev.com)
-
 <h3 align="center">Languages</h3>
 <p align="center">
     <img alt="Go" src="https://img.shields.io/badge/-Go-00ADD8?style=for-the-badge&logo=Go&logoColor=fff"/>
@@ -65,7 +63,7 @@
 
 
 ```typescript
-const kallydev = {
+const XTL = {
     pronouns: ["He", "Him"],
     hobby: ["Coffee", "Programming", "Music", "football"],
     languages: ["Go", "Kotlin", "TypeScript", "Python", 'Java', 'Rust', 'C++', "Bash", "Dart"],
