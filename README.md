@@ -67,7 +67,7 @@
 ```typescript
 const kallydev = {
     pronouns: ["He", "Him"],
-    hobby: ["Coffee", "Programming", "Music", "Painting"],
+    hobby: ["Coffee", "Programming", "Music", "football"],
     languages: ["Go", "Kotlin", "TypeScript", "Python", 'Java', 'Rust', 'C++', "Bash", "Dart"],
     technologyStack: {
         mobile: {
@@ -80,10 +80,10 @@ const kallydev = {
         backend: {
             framework: {
                 golang: ["Echo", "Go Kit"],
-                kotlin: ["Ktor", "Spring Boot"],
+                java: ["Ktor", "Spring Boot"],
                 python: ["Flask"],
             },
-            databases: ["PostgreSQL", "Redis", "MariaDB"],
+            databases: ["PostgreSQL", "Redis", "MariaDB","MySQL"],
             devops: ["Docker", "Kubernetes", "Nginx"],
             microservice: {
                 protocol: ["RESTful", "gRPC"],
