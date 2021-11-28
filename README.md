@@ -7,26 +7,26 @@
 </h2>
 <p>
     <samp>
-        I'm a developer, started programming in high school, and currently live in China. I like open
+        I'm a backend developer, started programming in high school, and currently live in China. I like open
         source, and most of the time I'm active on GitHub.
     </samp>
 </p>
 <p>
     <strong>Do have faith in what you're doing.</strong>
 <p>
-    <a href="https://t.me/kallydev">
+    <a href="https://t.me/XTleone">
         <img alt="KallyDev's Telegram" align="left" width="24px" src="https://github.com/kallydev/kallydev/raw/main/images/telegram.svg"/>
     </a>
-    <a href="https://github.com/kallydev">
+    <a href="https://github.com/XTL-666">
         <img alt="KallyDev's Github" align="left" width="24px" src="https://github.com/kallydev/kallydev/raw/main/images/github.svg"/>
     </a>
-    <a href="https://gitlab.com/kallydev">
+    <a href="https://gitlab.com/summerliang66">
         <img alt="KallyDev's GitLab" align="left" width="24px" src="https://github.com/kallydev/kallydev/raw/main/images/gitlab.svg"/>
     </a>
-     <a href="https://twitter.com/kallydev">
+     <a href="https://twitter.com/XTL661">
         <img alt="KallyDev's Twitter" align="left" width="24px" src="https://github.com/kallydev/kallydev/raw/main/images/twitter.svg"/>
     </a>
-    <a href="mailto:kallydev@gmail.com">
+    <a href="mailto:summerliang66@gmail.com">
         <img alt="KallyDev's Gmail" align="left" width="24px" src="https://github.com/kallydev/kallydev/raw/main/images/gmail.svg"/>
     </a>
     <br/>
