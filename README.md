@@ -95,7 +95,7 @@ const XTL = {
 ```
 
 <p align="right">
-    Designed with :heart: by <a href="https://github.com/kallydev" target="_blank">XTL</a>.
+    Designed with :heart: by <a href="https://github.com/xtl-666" target="_blank">XTL</a>.
 </p>
 
 </details>
