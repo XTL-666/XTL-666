@@ -81,11 +81,11 @@ const XTL = {
                 java: ["Ktor", "Spring Boot"],
                 python: ["Flask"],
             },
-            databases: ["PostgreSQL", "Redis", "MariaDB","MySQL"],
+            databases: ["PostgreSQL", "Redis", "MariaDB","MySQL","MangoDB"],
             devops: ["Docker", "Kubernetes", "Nginx"],
             microservice: {
                 protocol: ["RESTful", "gRPC"],
-                messageQueues: ["RabbitMQ"],
+                messageQueues: ["RabbitMQ","RocketMQ","Kafka"],
             },
         },
         systems: ["macOS", "Ubuntu", "Windows Server", "iOS", "Android"],
