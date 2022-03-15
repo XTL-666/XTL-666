@@ -5,16 +5,15 @@
 <h2>
     <samp>Hi there! I'm XTL.</samp>
 </h2>
-
-![github contribution grid snake animation](https://raw.githubusercontent.com/sljeff/sljeff/output/github-contribution-grid-snake.svg)
-
-
 <p>
     <samp>
         I'm a backend developer, started programming in high school, and currently live in China. I like open
         source, and most of the time I'm active on GitHub.
     </samp>
 </p>
+
+![github contribution grid snake animation](https://raw.githubusercontent.com/sljeff/sljeff/output/github-contribution-grid-snake.svg)
+
 <p>
     <strong>Do have faith in what you're doing.</strong>
 <p>
