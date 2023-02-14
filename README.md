@@ -12,14 +12,10 @@
     </samp>
 </p>
 
-![github contribution grid snake animation](https://raw.githubusercontent.com/sljeff/sljeff/output/github-contribution-grid-snake.svg)
-
 <p>
     <strong>Do have faith in what you're doing.</strong>
 <p>
-    <a href="https://t.me/XTleone">
-        <img alt="KallyDev's Telegram" align="left" width="24px" src="https://github.com/kallydev/kallydev/raw/main/images/telegram.svg"/>
-    </a>
+    
     <a href="https://github.com/XTL-666">
         <img alt="KallyDev's Github" align="left" width="24px" src="https://github.com/kallydev/kallydev/raw/main/images/github.svg"/>
     </a>
