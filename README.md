@@ -1,6 +1,3 @@
-<a href="https://t.me/joinchat/m9aY4pQ2HL1lMDEx" target="_blank">
-    <img align="right" width="128px" src="https://github.com/kallydev/kallydev/raw/main/images/telegram_group.jpg"/>
-</a>
 
 <h2>
     <samp>Hi there! I'm XTL.</samp>
@@ -15,7 +12,7 @@
 <p>
     <strong>Do have faith in what you're doing.</strong>
 <p>
-    
+<p>
     <a href="https://github.com/XTL-666">
         <img alt="KallyDev's Github" align="left" width="24px" src="https://github.com/kallydev/kallydev/raw/main/images/github.svg"/>
     </a>
