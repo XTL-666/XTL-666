@@ -2,12 +2,6 @@
 <h2>
     <samp>Hi there! I'm XTL.</samp>
 </h2>
-<p>
-    <samp>
-        I'm a developer,started programming in high school, and currently live in China. I like open
-        source, and most of the time I'm active on GitHub.
-    </samp>
-</p>
 
 <p>
     <strong>Do have faith in what you're doing.</strong>
